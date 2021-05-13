@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilo3.css">
+    <script src="funcao3.js"> </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js" 
+        integrity="sha512-d4KkQohk+HswGs6A1d6Gak6Bb9rMWtxjOa0IiY49Q3TeFd5xAzjWXDCBW9RS7m86FQ4RzM2BdHmdJnnKRYknxw==" 
+        crossorigin="anonymous">
+    </script> 
+</head>
+<body>
+    <main>
+    <h1>Agenda de Contatos</h1>
+    
+    <form onsubmit="addNewContact()">
+        <div>
+            <label>Nome: </label><br/>
+            <input type="text" name="inome"  size="30" required/>
+        </div>
+        <div>
+            <label>Telefone: </label><br/>
+            <input id="telefone" type="tel" name="ifone"  size="13"/ required>
+            <small>"88 98945 6978"</small>
+        </div>
+        <div>
+            <label>Email: </label><br/>
+            <input type="email" name="iemail" size="30" required/>
+            <small>"contato@email.com"</small>
+        </div>
+        <div>
+            <label>Local: <small>(opcional)</small></label><br/>
+            <input type="text" name="ilocal" size="30"/>
+        </div>
+        <button type="submit">Salvar<img src="https://img.icons8.com/offices/30/000000/address-book.png"/></button>    
+          
+    </form>
+    
+    <div id="listagem">
+        <h3>Contatos:</h3>
+        <ul id="listContact">
+         
+
+        </ul>
+    </div>
+
+    </main>
+
+    <script>
+		$("#telefone").mask("(99) 99999-9999");
+
+		$("#cep").mask("99999-999");
+
+		$("#cpf").mask("999.999.999-99");
+
+		$("#cnpj").mask("99.999.999/9999-99");
+
+		$("#data").mask("99/99/9999");
+	</script>
+</body>
+</html>
