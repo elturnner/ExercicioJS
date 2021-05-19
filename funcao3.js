@@ -9,12 +9,15 @@ function addNewContact(){
 
     //criar um novo elemento
     let itemContact = document.createElement("li")
-    itemContact.innerText=cpNome + "\n" + cpFone + "-" + cpEmail + "-" + cpLocal
+    itemContact.innerText=cpNome + "\n" + cpFone + "\n" + cpEmail + "\n" + cpLocal
+    itemContact.style.borderStyle="double"
 
     let btnRemove = document.createElement("button")
     btnRemove.type = "button"
     btnRemove.innerText = "Remover"
     btnRemove.style.display="inline-block"
+    btnRemove.style.marginLeft="260px"
+
     btnRemove.setAttribute("onclick","removeContact(this)")
 
     //add o button ao li
@@ -33,17 +36,4 @@ function addNewContact(){
 function removeContact(btn){
     let elem = btn.parentNode
     document.querySelector("ul#listContact").removeChild(elem)
-}
-
-function addFone(){
-    const formulario = document.querySelector("#phones")
-    const novoFone = formulario.children[0].cloneNode(true)
-    const pos = formulario.children.length + 1
-
-    //reset elementos
-    novoFone.querySelector("label").innerText="Telefone "+pos+":"
-    novoFone.querySelector("input[name='ifone']").value=""
-
-    //adicionar ao formulario
-    formulario.appendChild(novoFone)
 }

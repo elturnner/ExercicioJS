@@ -20,9 +20,7 @@ form{
     font-size: 14pt;
     width: 400px;
     position: absolute;
-    left: 20%;
-    
-    
+    left: 20%;     
 }
 
 div{
@@ -46,9 +44,7 @@ div#listagem{
     width: 400px;
     position: absolute;
     right: 20%;
-
 }
-
 
 button{
     display: block;
