@@ -39,7 +39,7 @@ input{
 div#listagem{
     background-color: lightsalmon;
     margin-left: auto;
-    height: 200px;
+    height: 300px;
     overflow-y: scroll;
     width: 400px;
     position: absolute;
